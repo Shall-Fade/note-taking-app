@@ -28,7 +28,7 @@ const recentNotes = computed(() => store.state.recentNotes);
 const selectedNote = computed(() => store.state.selectedNote);
 
 // Выбрать заметку
-function selectNote(note: string) {
+function selectNote(note: any) {
   store.commit("TOGGLE_SELECTED_NOTE", note);
   // Отобразить блок с заметкой
   store.commit("TOGGLE_NOTE_BLOCK", true);
@@ -36,7 +36,8 @@ function selectNote(note: string) {
   // Ограничить число недавних заметок
   if (recentNotes.value.length <= 3) {
     if (recentNotes.value.every((item: any) => item !== note)) {
-      store.commit("ADD_RECENT_NOTES", note);
+      recentNotes.value.unshift(note);
+      store.commit("ADD_RECENT_NOTES", recentNotes.value);
     }
     recentNotes.value.splice(3);
   }

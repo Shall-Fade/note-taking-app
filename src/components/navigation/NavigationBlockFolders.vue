@@ -18,7 +18,11 @@
       v-for="(folder, index) in folders"
       :key="index"
       @click="selectFolder(folder)"
-      :class="[folder === selectedFolder ? 'bg-white/[3%] text-white' : 'text-white/60 hover:text-white/80']"
+      :class="[
+        folder === selectedFolder
+          ? 'bg-white/[3%] text-white'
+          : 'text-white/60 hover:text-white/80',
+      ]"
       :currentSection="toggleFolder(folder)"
     >
       <template v-slot:title>{{ folder.title }}</template>

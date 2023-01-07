@@ -46,8 +46,8 @@ const store = createStore({
     ADD_FOLDER(state, folder) {
       state.folders.push(folder);
     },
-    ADD_RECENT_NOTES(state, note) {
-      state.recentNotes.unshift(note);
+    ADD_RECENT_NOTES(state, notes) {
+      state.recentNotes = notes;
     },
     CHANGE_FOLDER_DATA(state, folders) {
       state.folders = folders;
