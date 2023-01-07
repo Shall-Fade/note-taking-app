@@ -11,7 +11,7 @@
         <button @click="closeModal">
           <img
             class="w-[30px] h-[30px]"
-            src="../../assets/images/close-icon.svg"
+            src="/images/close-icon.svg"
             alt="Close"
           />
         </button>

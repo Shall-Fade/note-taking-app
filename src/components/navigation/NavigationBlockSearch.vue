@@ -1,11 +1,11 @@
 <template>
   <div class="px-[20px]">
     <div class="flex items-center justify-between mb-[30px]">
-      <img src="../../assets/logo.svg" alt="Logo" />
+      <img src="/logo.svg" alt="Logo" />
       <button @click="openSearchBlock">
         <img
           class="w-[20px] h-[20px]"
-          src="../../assets/images/search-icon.svg"
+          src="/images/search-icon.svg"
           alt="Search"
         />
       </button>
@@ -18,7 +18,7 @@
       />
       <img
         class="absolute left-[10px] w-[20px] h-[20px]"
-        src="../../assets/images/search-icon.svg"
+        src="/images/search-icon.svg"
         alt="Search"
       />
     </div>
@@ -29,7 +29,7 @@
     >
       <img
         class="w-[20px] h-[20px] mr-[8px]"
-        src="../../assets/images/plus-icon.svg"
+        src="/images/plus-icon.svg"
         alt="Plus"
       />
       <p class="text-[16px] leading-[20px] font-semibold">New Note</p>

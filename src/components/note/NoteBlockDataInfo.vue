@@ -3,7 +3,7 @@
     <div class="flex items-center mb-[15px]">
       <img
         class="w-[18px] h-[18px] mr-[20px]"
-        src="../../assets/images/date-icon.svg"
+        src="/images/date-icon.svg"
         alt="Date"
       />
       <h6
@@ -19,7 +19,7 @@
     <div class="flex items-center mb-[15px]">
       <img
         class="w-[18px] h-[18px] mr-[20px]"
-        src="../../assets/images/folder-icon.svg"
+        src="/images/folder-icon.svg"
         alt="Folder"
       />
       <h6

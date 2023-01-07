@@ -9,7 +9,7 @@
       <button @click="openModal">
         <img
           class="w-[20px] h-[20px]"
-          src="../../assets/images/add-folder-icon.svg"
+          src="/images/add-folder-icon.svg"
           alt="Add Folder"
         />
       </button>

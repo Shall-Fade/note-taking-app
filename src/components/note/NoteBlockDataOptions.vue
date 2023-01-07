@@ -2,7 +2,7 @@
   <button @click="toggleOptions">
     <img
       class="w-[30px] h-[30px]"
-      src="../../assets/images/settings-icon.svg"
+      src="/images/settings-icon.svg"
       alt="Settings"
     />
   </button>
@@ -16,7 +16,7 @@
     >
       <img
         class="w-[20px] h-[20px] mr-[15px]"
-        src="../../assets/images/trash-icon.svg"
+        src="/images/trash-icon.svg"
         alt="Trash"
       />
       <p class="text-[16px] leading-[20px] text-white">Delete</p>

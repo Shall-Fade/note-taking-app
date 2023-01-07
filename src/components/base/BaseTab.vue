@@ -26,28 +26,27 @@ const props = defineProps<{
 function createCorrectLink(): string {
   switch (props.currentSection) {
     case "folder": {
-      correctLink.value = "./../../../src/assets/images/folder-icon.svg";
+      correctLink.value = "images/folder-icon.svg";
       break;
     }
     case "open-folder": {
-      correctLink.value = "./../../../src/assets/images/open-folder-icon.svg";
+      correctLink.value = "images/open-folder-icon.svg";
       break;
     }
     case "recent": {
-      correctLink.value = "./../../../src/assets/images/file-icon.svg";
+      correctLink.value = "images/file-icon.svg";
       break;
     }
     case "favorites": {
-      correctLink.value = "./../../../src/assets/images/favorites-icon.svg";
+      correctLink.value = "images/favorites-icon.svg";
       break;
     }
     case "trash": {
-      correctLink.value = "./../../../src/assets/images/trash-icon.svg";
+      correctLink.value = "images/trash-icon.svg";
       break;
     }
     case "archived": {
-      correctLink.value =
-        "./../../../src/assets/images/archived-notes-icon.svg";
+      correctLink.value = "images/archived-notes-icon.svg";
       break;
     }
   }
