@@ -67,7 +67,7 @@ function createNote() {
     title: noteTitle.value,
     date: `${date}/${month}/${year}`,
     folder: selectedFolder.value.title,
-    text: "Lorem ipsum dolor sit amet.",
+    text: "",
   };
 
   // Отправить заметку в выбранную папку
