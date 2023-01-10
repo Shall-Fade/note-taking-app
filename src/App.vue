@@ -1,11 +1,11 @@
 <template>
-  <div
-    className="grid grid-cols-12 font-source-sans-pro font-normal text-[16px] bg-black text-white h-screen"
+  <body
+    className="grid grid-cols-12 font-source-sans-pro font-normal text-[16px] bg-black text-white min-h-screen scrollbar-thin scrollbar-thumb-white/60 scrollbar-track-white/[10%]"
   >
     <NavigationBlock />
     <FolderBlock />
     <NoteBlock />
-  </div>
+  </body>
 </template>
 
 <script setup lang="ts">

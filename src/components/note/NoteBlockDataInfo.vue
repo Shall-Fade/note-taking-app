@@ -33,7 +33,7 @@
     </div>
     <textarea
       v-model="selectedNote.text"
-      class="text-[16px] leading-[28px] bg-black border-white/10 border-[1px] w-full min-h-[600px] h-full p-[15px] outline-none resize-none rounded-[6px] mb-[15px]"
+      class="text-[16px] leading-[28px] bg-black border-white/10 border-[1px] w-full min-h-[600px] h-full p-[15px] outline-none resize-none rounded-[6px] mb-[15px] scrollbar-thin scrollbar-thumb-white/60 scrollbar-track-white/[10%]"
     ></textarea>
     <button
       @click="saveText"
@@ -47,17 +47,19 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useStore } from "vuex";
+import Note from "../../types/Note";
 
 // Переменные
 const store = useStore();
 const folders = computed(() => store.state.folders);
 const selectedNote = computed(() => store.state.selectedNote);
 
+// FIX функция saveText не сохраняет изменения
 // Сохранить текст
 function saveText() {
   // Найти и заменить выбранную заметку
   for (let i = 0; i < folders.value.length; i++) {
-    folders.value[i].notes.forEach(function (item: any) {
+    folders.value[i].notes.forEach(function (item: Note) {
       if (item === selectedNote.value) {
         folders.value[i].notes.splice(
           folders.value[i].notes.indexOf(item),

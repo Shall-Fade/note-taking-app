@@ -38,6 +38,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useStore } from "vuex";
+import Note from "../../types/Note";
 
 // Переменные
 const store = useStore();
@@ -45,14 +46,6 @@ const folders = computed(() => store.state.folders);
 const isNoteModalVisible = computed(() => store.state.isNoteModalVisible);
 const selectedFolder = computed(() => store.state.selectedFolder);
 const noteTitle = ref("");
-
-// Типы
-type Note = {
-  title: string;
-  date: string;
-  folder: string;
-  text: string;
-};
 
 // Создать заметку
 function createNote() {

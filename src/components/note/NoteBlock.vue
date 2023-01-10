@@ -1,6 +1,6 @@
 <template>
   <section
-    class="col-span-8 w-full h-screen py-[50px] px-[50px] bg-black overflow-y-auto"
+    class="col-span-8 w-full h-screen py-[50px] px-[50px] bg-black"
   >
     <NoteBlockData v-if="isNoteBlockVisible" />
     <NoteBlockEmptyState v-else />

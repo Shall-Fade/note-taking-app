@@ -27,6 +27,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useStore } from "vuex";
+import Note from "../../types/Note";
 
 // Переменные
 const store = useStore();
@@ -45,7 +46,7 @@ function toggleOptions() {
 function deleteNote() {
   // Найти и удалить заметку
   for (let i = 0; i < folders.value.length; i++) {
-    folders.value[i].notes.forEach(function (item: any) {
+    folders.value[i].notes.forEach(function (item: Note) {
       if (item === selectedNote.value) {
         folders.value[i].notes.splice(folders.value[i].notes.indexOf(item), 1);
         store.commit("CHANGE_FOLDER_DATA", folders.value);

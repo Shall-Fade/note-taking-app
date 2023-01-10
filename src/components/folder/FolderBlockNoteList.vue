@@ -20,6 +20,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useStore } from "vuex";
+import Note from "../../types/Note";
 
 // Переменные
 const store = useStore();
@@ -28,14 +29,14 @@ const recentNotes = computed(() => store.state.recentNotes);
 const selectedNote = computed(() => store.state.selectedNote);
 
 // Выбрать заметку
-function selectNote(note: any) {
+function selectNote(note: Note) {
   store.commit("TOGGLE_SELECTED_NOTE", note);
   // Отобразить блок с заметкой
   store.commit("TOGGLE_NOTE_BLOCK", true);
 
   // Ограничить число недавних заметок
   if (recentNotes.value.length <= 3) {
-    if (recentNotes.value.every((item: any) => item !== note)) {
+    if (recentNotes.value.every((item: Note) => item !== note)) {
       recentNotes.value.unshift(note);
       store.commit("ADD_RECENT_NOTES", recentNotes.value);
     }

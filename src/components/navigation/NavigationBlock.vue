@@ -1,5 +1,5 @@
 <template>
-  <section class="col-span-2 h-screen py-[30px] bg-black overflow-y-auto">
+  <section class="col-span-2 h-screen py-[30px] bg-black overflow-y-auto scrollbar-thin scrollbar-thumb-white/60 scrollbar-track-white/[10%]">
     <NavigationBlockSearch />
     <NavigationBlockRecents />
     <NavigationBlockFolders />

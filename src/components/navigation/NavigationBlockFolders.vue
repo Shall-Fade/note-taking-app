@@ -46,7 +46,7 @@ function selectFolder(folder: string) {
 }
 
 // Открыть / закрыть папку
-function toggleFolder(folder: string) {
+function toggleFolder(folder: string): string {
   if (selectedFolder.value === folder) {
     return "open-folder";
   } else {

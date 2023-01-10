@@ -38,17 +38,12 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useStore } from "vuex";
+import Folder from "../../types/Folder";
 
 // Переменные
 const store = useStore();
 const isFolderModalVisible = computed(() => store.state.isFolderModalVisible);
 const folderTitle = ref("");
-
-// Типы
-type Folder = {
-  title: string;
-  notes: any;
-};
 
 // Создать папку
 function createFolder() {
